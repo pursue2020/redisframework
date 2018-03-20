@@ -29,9 +29,9 @@ public class SecKillTest {
 	public void testSecKill(){
 		int threadCount = 1000;
 		int splitPoint = 500;
-		CountDownLatch endCount = new CountDownLatch(threadCount);
-		CountDownLatch beginCount = new CountDownLatch(1);
-		SecKillImpl testClass = new SecKillImpl();
+		final CountDownLatch endCount = new CountDownLatch(threadCount);
+		final CountDownLatch beginCount = new CountDownLatch(1);
+		final SecKillImpl testClass = new SecKillImpl();
 		
 		Thread[] threads = new Thread[threadCount];
 		//起500个线程，秒杀第一个商品

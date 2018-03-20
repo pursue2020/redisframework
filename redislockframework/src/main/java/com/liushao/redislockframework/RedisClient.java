@@ -549,7 +549,7 @@ public class RedisClient {
 		try{
 			success = client.expire(key, seconds);
 		}finally{
-			jedisPool.returnResourceObject(client);;
+			jedisPool.returnResourceObject(client);
 		}
 		return success;
 	}

@@ -69,7 +69,7 @@ public class CacheLockInterceptor implements InvocationHandler{
 					index = i;
 					try {
 						return args[i].getClass().getField(((LockedComplexObject)annotations[i][j]).field());
-					} catch (NoSuchFieldException | SecurityException e) {
+					} catch (Exception e) {
 						throw new CacheLockException("注解对象中没有该属性" + ((LockedComplexObject)annotations[i][j]).field());
 					}
 				}

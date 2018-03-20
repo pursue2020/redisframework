@@ -6,7 +6,7 @@ import java.util.Map;
 public class SecKillImpl implements SeckillInterface{
 	static Map<Long, Long> inventory ;
 	static{
-		inventory = new HashMap<>();
+		inventory = new HashMap<Long, Long>();
 		inventory.put(10000001L, 10000l);
 		inventory.put(10000002L, 10000l);
 	}
